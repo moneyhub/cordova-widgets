@@ -23,7 +23,28 @@ document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
+    document.addEventListener("pause", onPause, false);
+    document.addEventListener("resume", onResume, false);
+    document.addEventListener("menubutton", onMenuKeyDown, false);
 
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
+    console.log('Device ready Running cordova-' + cordova.platformId + '@' + cordova.version);
+
+    window.IonicDeeplink.onDeepLink((data) => console.log("deepLink", data))
 }
+
+function onPause() {
+    // Handle the pause event
+}
+
+function onResume() {
+    // Handle the resume event
+}
+
+function onMenuKeyDown() {
+    // Handle the menubutton event
+}
+
+// listen for uncaught cordova callback errors
+window.addEventListener("cordovacallbackerror", function (event) {
+    // event.error contains the original error object
+});
