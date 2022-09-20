@@ -1,12 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.moneyhub.widgets" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.moneyhub.widgets" version="1.0.0"
+xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>MoneyhubWidgets</name>
     <description>Sample Apache Cordova App</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>
+    <!-- <content src="index.html" /> -->
     <content src="index.html" />
     <preference name="AndroidLaunchMode" value="singleTask" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <!-- Enable requests to content: URLs -->
+    <access origin="content:///*" />
+    <!-- Don't block any requests -->
+    <access origin="*" />
+    <allow-navigation href="*" />
 </widget>

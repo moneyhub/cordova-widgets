@@ -15,6 +15,8 @@
   "devDependencies": {
     "cordova-android": "^10.1.2",
     "cordova-ios": "^6.2.0",
+    "cordova-plugin-cleartext": "^1.0.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
     "ionic-plugin-deeplinks": "^1.0.24"
   },
   "cordova": {
@@ -40,7 +42,9 @@
         "DEEPLINK_4_HOST": " ",
         "DEEPLINK_5_SCHEME": " ",
         "DEEPLINK_5_HOST": " "
-      }
+      },
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-cleartext": {}
     }
   }
 }

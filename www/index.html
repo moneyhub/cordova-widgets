@@ -24,23 +24,17 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
         <meta name="color-scheme" content="light dark">
-        <script src="https://bank-chooser.moneyhub.co.uk/accounts-assets.js" data-identityuri="https://identity.moneyhub.co.uk" data-apigatewayuri="https://api.moneyhub.co.uk"></script>
-        <title>Accounts & assets</title>
+        <meta http-equiv="Content-Security-Policy" content="*">
+        <link rel="stylesheet" href="css/app-styles.css">
+        <script
+            src="https://bank-chooser.moneyhub.co.uk/payment.js"
+            data-identityuri="https://identity.moneyhub.co.uk"
+            data-apigatewayuri="https://apigateway.moneyhub.co.uk"
+        ></script>
+        <title>Moneyhub widgets</title>
     </head>
     <body>
         <div id="app"></div>
-    <script>
-      window.moneyhub.init({
-        elem: document.getElementById("app"),
-        getJWT: () =>
-          fetch("https://mh-widget-demo.herokuapp.com/jwt")
-            .then(res => res.json())
-            .then(({jwt, error}) => {
-              if (error) throw new Error(error)
-              return jwt
-            })
-      })
-    </script>
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>
