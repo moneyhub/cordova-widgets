@@ -17,6 +17,7 @@
  * under the License.
  */
 
+
 const CONFIG = {
     CLIENT_ID: "client-id",
     CLIENT_SECRET: "client-secret",
@@ -58,12 +59,11 @@ function initialiseMoneyhubWidget() {
         payeeId: CONFIG.PAYEE_ID,
         payeeRef: "Payee ref",
         payerRef: "Payer ref",
-        startText: "Start text",
+        startText: "We have partnered with Moneyhub to enable you to make payments via OpenBanking",
         amount: 100,
-        type: "api",
+        type: "test",
         redirectUri: CONFIG.REDIRECT_URI,
         openUri: openLinkInBrowser,
-        getJWT: () =>
       })
 }
 
