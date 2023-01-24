@@ -6,9 +6,11 @@ Example cordova app that shows how to initialise our [demo moneyhub widget](http
 
 1.- `sudo npm install -g cordova`
 
-2.- `cordova build ios|android`
+2.- `cordova platform add ios|android`
 
-3.- `cordova emulate ios|android`
+3.- `cordova build ios|android`
+
+4.- `cordova emulate ios|android`
 
 ## Example
 
